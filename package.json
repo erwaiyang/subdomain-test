@@ -12,5 +12,8 @@
     "nginx"
   ],
   "author": "Jean Yang",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
 }
