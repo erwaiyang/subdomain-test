@@ -24,6 +24,6 @@ app.get('/dashboard', (req, res) => {
   res.send('This is a dashboard.');
 })
 
-app.listen(PORT, function () {
+app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}!`)
 });
