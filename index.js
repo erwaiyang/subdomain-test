@@ -4,17 +4,8 @@ const vhost = require('vhost');
 const app = express();
 const PORT = 3001;
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.send('Api home');
-});
-
-router.get('/login', (req, res) => {
-  res.send('login api');
-});
-
-app.use(vhost('api.localhost', router));
+const apiRoute = require('./apiRoute');
+app.use(vhost('api.localhost', apiRoute));
 
 app.get('/', (req, res) => {
   res.send('Home route!');
