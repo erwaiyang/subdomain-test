@@ -4,6 +4,9 @@ const vhost = require('vhost');
 const app = express();
 const PORT = 3001;
 
+const helpRoute = require('./helpRoute');
+app.use('/help', helpRoute);
+
 const apiRoute = require('./apiRoute');
 app.use(vhost('api.localhost', apiRoute));
 
